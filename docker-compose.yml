@@ -16,7 +16,7 @@ services:
       - ./src:/src
       - ./tests:/tests
     ports:
-      - "8000:80"
+      - "80:80"
 
 
   postgres:
@@ -25,4 +25,4 @@ services:
       - POSTGRES_USER=ensoserver
       - POSTGRES_PASSWORD=abc123
     ports:
-      - "54321:5432"
+      - "5432:5432"
