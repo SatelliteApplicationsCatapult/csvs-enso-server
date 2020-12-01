@@ -18,5 +18,7 @@ jobs:
         run: docker-compose up -d app
       - name: Check running containers
         run: docker ps -a
+      - name: Logs
+        run: docker-compose logs app
       - name: E2E Tests
         run: docker-compose run --rm --no-deps --entrypoint=pytest app /tests/e2e -v
